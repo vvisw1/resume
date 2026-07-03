@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楊旻瑾 ｜ 內容行銷人</title>
+<meta name="description" content="楊旻瑾 — 內容行銷人。SEO、Google／Meta 廣告投放、社群與影音企劃。官網流量 3.5 倍成長、自然搜尋 4 倍。">
+<style>
+  :root{
+    --ink:#17150F;          /* 近黑（暖） */
+    --ink-2:#3D3A33;        /* 次要文字 */
+    --ink-3:#8A857A;        /* 輔助灰 */
+    --line:#E3DFD6;         /* 髮絲線 */
+    --paper:#FBFAF7;        /* 紙白 */
+    --paper-2:#F3F1EA;      /* 區塊底 */
+    --accent:#C75B27;       /* 單一強調色：磚橘 */
+    --accent-soft:#F4E6DC;
+    --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans TC","Helvetica Neue",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--paper);color:var(--ink);
+    line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;
+    font-feature-settings:"tnum";
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+
+  /* ── 區塊標題：序號 + 小標 ── */
+  .sec{padding:72px 0;border-top:1px solid var(--line)}
+  .sec:first-of-type{border-top:none}
+  .sec-label{
+    display:flex;align-items:baseline;gap:14px;margin-bottom:40px;
+    font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);
+  }
+  .sec-label .no{color:var(--accent);font-weight:700}
+  .sec-label .ln{flex:1;height:1px;background:var(--line)}
+
+  /* ── HERO ── */
+  header{padding:96px 0 64px}
+  .eyebrow{font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+  h1{font-size:clamp(48px,9vw,104px);line-height:.98;font-weight:800;letter-spacing:-.02em}
+  h1 .sub{display:block;font-size:clamp(20px,3.4vw,34px);font-weight:600;color:var(--ink-2);letter-spacing:0;margin-top:18px;line-height:1.3}
+  .lede{max-width:62ch;margin-top:30px;font-size:clamp(17px,2.1vw,20px);color:var(--ink-2)}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-size:15px;color:var(--ink-2)}
+  .meta a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px}
+  .meta a:hover{color:var(--accent)}
+  .meta .k{color:var(--ink-3);margin-right:8px}
+
+  /* ── 數據卡 ── */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:#fff}
+  .stat{padding:30px 26px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-size:clamp(38px,5.4vw,56px);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--ink)}
+  .stat .num b{color:var(--accent);font-weight:800}
+  .stat .cap{margin-top:12px;font-size:13.5px;color:var(--ink-3);line-height:1.5}
+  .stats-note{margin-top:14px;font-size:12.5px;color:var(--ink-3)}
+
+  /* ── 經歷 ── */
+  .job{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
+  .job:first-child{border-top:none;padding-top:0}
+  .job .when{font-size:14px;color:var(--ink-3);letter-spacing:.02em}
+  .job .when .now{display:inline-block;margin-top:6px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:2px 10px}
+  .job h3{font-size:21px;font-weight:700;letter-spacing:-.01em}
+  .job .org{margin-top:4px;font-size:15px;color:var(--ink-2)}
+  .job ul{margin-top:14px;padding-left:0;list-style:none;display:grid;gap:8px}
+  .job li{position:relative;padding-left:20px;color:var(--ink-2);font-size:15px}
+  .job li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:1.5px;background:var(--accent)}
+  .job li b{color:var(--ink);font-weight:600}
+  .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .tag{font-size:12.5px;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+
+  /* ── 技能 ── */
+  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 48px}
+  .skill h4{font-size:14px;letter-spacing:.04em;color:var(--accent);margin-bottom:12px;font-weight:700}
+  .skill p{color:var(--ink-2);font-size:15px}
+
+  /* ── 作品連結 ── */
+  .links{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .lk{display:flex;justify-content:space-between;align-items:center;gap:16px;
+      padding:22px 24px;border:1px solid var(--line);background:#fff;text-decoration:none;color:inherit;transition:.18s}
+  .lk:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .lk .t{font-weight:700;font-size:16px}
+  .lk .d{display:block;font-size:13.5px;color:var(--ink-3);margin-top:8px}
+  .lk .arrow{color:var(--accent);font-size:20px;flex-shrink:0}
+  .portfolio-btn{
+    display:inline-flex;align-items:center;gap:8px;margin-top:24px;
+    padding:14px 28px;border:2px solid var(--accent);border-radius:6px;
+    color:var(--accent);font-size:15px;font-weight:700;text-decoration:none;
+    transition:.18s;
+  }
+  .portfolio-btn:hover{background:var(--accent);color:#fff}
+
+  /* ── 學歷/語言 簡列 ── */
+  .row{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:18px 0;border-top:1px solid var(--line);font-size:15px}
+  .row:first-child{border-top:none}
+  .row .lab{color:var(--ink-3)}
+  .row .val b{font-weight:700}
+  .row .val .muted{color:var(--ink-3)}
+
+  footer{padding:60px 0 80px;border-top:1px solid var(--line);color:var(--ink-3);font-size:13.5px}
+  footer a{color:var(--ink-2)}
+
+  @media(max-width:720px){
+    .wrap{padding:0 22px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(2){border-right:none}
+    .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+    .job,.row{grid-template-columns:1fr;gap:10px}
+    .job .when .now{margin-top:0}
+    .skills,.links{grid-template-columns:1fr}
+    header{padding:64px 0 40px}
+    .sec{padding:56px 0}
+  }
+  @media print{
+    body{background:#fff;font-size:12px}
+    .lk:hover,.lk{transform:none}
+    .sec,header{padding:24px 0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ░░ HERO ░░ -->
+  <header>
+    <div class="eyebrow">內容行銷人 · Content Marketer</div>
+    <h1>楊旻瑾
+      <span class="sub">用內容與數據，把流量轉成收益。</span>
+    </h1>
+    <p class="lede">
+      中文系出身、七年數位行銷實戰。橫跨 SEO 內容策略、Google／Meta 廣告投放、社群與影音企劃，
+      從策略規劃到數據追蹤一手包辦。習慣從數據中找下一步，把每一分預算花在能成交的地方。
+    </p>
+    <div class="meta">
+      <span><span class="k">地點</span>高雄（可遠端）</span>
+      <span><span class="k">Email</span><a href="mailto:vvisw1@gmail.com">vvisw1@gmail.com</a></span>
+      <span><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/jinds/" target="_blank" rel="noopener">/in/jinds</a></span>
+    </div>
+  </header>
+
+  <!-- ░░ 數據成績 ░░ -->
+  <section class="sec" id="impact">
+    <div class="sec-label"><span class="no">01</span><span>成效數據 · Impact</span><span class="ln"></span></div>
+    <div class="stats">
+      <div class="stat">
+        <div class="num"><b>3.5×</b></div>
+        <div class="cap">藝瓦官網月活躍使用者<br>（接手後約 5,400 → 19,000）</div>
+      </div>
+      <div class="stat">
+        <div class="num"><b>4×</b></div>
+        <div class="cap">自然搜尋流量成長<br>主要來自 SEO 內容策略</div>
+      </div>
+      <div class="stat">
+        <div class="num">1.2<span style="font-size:.5em">萬</span></div>
+        <div class="cap">Facebook 粉專追蹤者<br>YouTube 2,620 訂閱 · 62 部長片（2023.05 起策劃）</div>
+      </div>
+      <div class="stat">
+        <div class="num"><b>−40%</b></div>
+        <div class="cap">廣告單次轉換成本（CPA）<br>以 Target CPA 策略優化並穩定</div>
+      </div>
+    </div>
+    <p class="stats-note">＊數據取自 GA4 與各平台後台；廣告成本以相對降幅呈現。</p>
+  </section>
+
+  <!-- ░░ 經歷 ░░ -->
+  <section class="sec" id="experience">
+    <div class="sec-label"><span class="no">02</span><span>工作經歷 · Experience</span><span class="ln"></span></div>
+
+    <div class="job">
+      <div class="when">2022.06 – 2026.04</div>
+      <div class="body">
+        <h3>網站行銷企劃 → 行銷主管</h3>
+        <div class="org">藝瓦室內設計（藝瓦室內裝修設計工程有限公司）· 高雄</div>
+        <ul>
+          <li>主導官網 SEO 內容策略，<b>月活躍使用者成長約 3.5 倍、自然搜尋流量逾 4 倍</b>；同時經營旗下第二品牌「邑合空間 EHO」。</li>
+          <li>規劃並執行多縣市 Google Ads（高雄／台北／台中／台南／全台品牌字）與 Meta 廣告，運用 Target CPA、競爭指標（預算／排名）等優化，<b>主力廣告 CPA 約降 4 成</b>。</li>
+          <li>經營 FB／IG／LINE 社群至 <b>1.2 萬追蹤</b>，並主導 YouTube 影音企劃（腳本、封面、新家開箱現場監督、剪輯方向）。</li>
+          <li>制定部門 KPI、獎金制度與年度行銷預算，統籌攝影／影片／廣告外包，並負責招募與團隊建立。</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Google Ads</span><span class="tag">Meta 廣告</span><span class="tag">SEO</span>
+          <span class="tag">GA4 · GTM · GSC</span><span class="tag">WordPress</span><span class="tag">n8n 自動化</span>
+          <span class="tag">影音企劃</span><span class="tag">團隊管理</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">2019.03 – 2022.03</div>
+      <div class="body">
+        <h3>行銷業務</h3>
+        <div class="org">台灣知識庫股份有限公司 · 高雄</div>
+        <ul>
+          <li>參與行銷活動策劃與執行，經營臉書、IG 與部落格內容。</li>
+          <li>課程諮詢與顧問式推薦，累積客戶溝通與通路開發經驗。</li>
+        </ul>
+        <div class="tags"><span class="tag">社群經營</span><span class="tag">內容撰寫</span><span class="tag">通路開發</span></div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">2018.06 – 2018.09</div>
+      <div class="body">
+        <h3>創意廣告文案企劃</h3>
+        <div class="org">兆暘整合行銷管理顧問有限公司 · 高雄</div>
+        <ul>
+          <li>撰寫創意行銷文案、影片腳本與部落格文章，推廣自家網紅與保健食品。</li>
+          <li>快節奏環境中即興發想，產出具影響力的品牌內容。</li>
+        </ul>
+        <div class="tags"><span class="tag">文案撰寫</span><span class="tag">創意發想</span><span class="tag">腳本</span></div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">2010.12 – 2013.06</div>
+      <div class="body">
+        <h3>文字編輯</h3>
+        <div class="org">好燙詩社（書籍出版）· 遠端</div>
+        <ul>
+          <li>審稿、主題發想與封面設計，奠定文字與內容基本功。</li>
+        </ul>
+        <div class="tags"><span class="tag">編輯校對</span><span class="tag">當代詩創作</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ 專長 ░░ -->
+  <section class="sec" id="skills">
+    <div class="sec-label"><span class="no">03</span><span>專業技能 · Skills</span><span class="ln"></span></div>
+    <div class="skills">
+      <div class="skill"><h4>數位廣告</h4><p>Google Ads（搜尋／DSA／GDN／品牌字防衛）、Meta 廣告；多縣市帳戶結構、Target CPA／手動出價／爭取轉換 策略切換。</p></div>
+      <div class="skill"><h4>SEO 與內容</h4><p>關鍵字策略、長文撰寫、精選摘要（Featured Snippet）操作；10＋ 組關鍵字進 Google 第一頁／前兩頁。</p></div>
+      <div class="skill"><h4>數據分析</h4><p>GA4、Google Search Console、GTM 事件追蹤、UTM 規劃；以數據驅動投放與內容決策。</p></div>
+      <div class="skill"><h4>自動化與工具</h4><p>n8n 自動化流程、AI 工具整合於內容生產；WordPress 網站管理、Google Workspace／M365。</p></div>
+      <div class="skill"><h4>社群與影音</h4><p>FB／IG／Threads／LINE 經營；YouTube 影音企劃——腳本、封面、現場監督到剪輯方向。</p></div>
+      <div class="skill"><h4>行銷管理</h4><p>KPI 與獎金制度、年度預算規劃、跨部門與外包協調、招募與團隊建立。</p></div>
+    </div>
+  </section>
+
+  <!-- ░░ 作品 ░░ -->
+  <section class="sec" id="work">
+    <div class="sec-label"><span class="no">04</span><span>作品與平台 · Work</span><span class="ln"></span></div>
+    <div class="links">
+      <a class="lk" href="https://www.ewa.com.tw/" target="_blank" rel="noopener">
+        <span><span class="t">藝瓦官網 · SEO 內容</span><span class="d">主導內容策略的官方網站</span></span><span class="arrow">↗</span></a>
+      <a class="lk" href="https://www.youtube.com/@ewaeho" target="_blank" rel="noopener">
+        <span><span class="t">YouTube · 藝瓦 EHO 設計</span><span class="d">2,620 訂閱 · 62 部長片（2023.05 起主導策劃）</span></span><span class="arrow">↗</span></a>
+      <a class="lk" href="https://www.facebook.com/ewa.com.tw" target="_blank" rel="noopener">
+        <span><span class="t">藝瓦 · Facebook 粉專</span><span class="d">經營至約 1.2 萬追蹤者</span></span><span class="arrow">↗</span></a>
+      <a class="lk" href="https://www.linkedin.com/in/jinds/" target="_blank" rel="noopener">
+        <span><span class="t">LinkedIn</span><span class="d">完整職涯與背景</span></span><span class="arrow">↗</span></a>
+    </div>
+    <a class="portfolio-btn" href="portfolio.html" target="_blank" rel="noopener">
+      ▸ 附件（含成效截圖與案例）
+    </a>
+  </section>
+
+  <!-- ░░ 學歷 / 其他 ░░ -->
+  <section class="sec" id="about">
+    <div class="sec-label"><span class="no">05</span><span>學歷與其他 · More</span><span class="ln"></span></div>
+    <div class="row"><div class="lab">學歷</div><div class="val"><b>東海大學 中文系</b> <span class="muted">· 2009 – 2013 · 學士</span></div></div>
+    <div class="row"><div class="lab">語言</div><div class="val">中文（母語）· 台語（中等）· 英文（基礎）</div></div>
+    <div class="row"><div class="lab">證照</div><div class="val">防火管理人員</div></div>
+    <div class="row"><div class="lab">文字創作</div><div class="val">豐富的當代詩創作經驗</div></div>
+    <div class="row"><div class="lab">求職方向</div><div class="val">文案 · 編輯 · 社群經營 · 行銷企劃 <span class="muted">· 全職 / 可遠端</span></div></div>
+  </section>
+
+  <footer>
+    楊旻瑾 · 內容行銷人 ｜ <a href="mailto:vvisw1@gmail.com">vvisw1@gmail.com</a> ｜ 高雄，可遠端<br>
+    本頁為個人履歷概況 · 最後更新 2026.06
+  </footer>
+
+</div>
+</body>
+</html>
