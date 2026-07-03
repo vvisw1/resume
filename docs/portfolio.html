@@ -29,35 +29,47 @@ header{padding:80px 0 48px}
 h1{font-size:clamp(28px,5vw,48px);line-height:1.1;font-weight:800;letter-spacing:-.02em}
 .subtitle{margin-top:14px;font-size:clamp(15px,1.6vw,18px);color:var(--ink-2);max-width:60ch;line-height:1.6}
 
-/* ── CARD GRID ── */
-.card-grid{display:grid;grid-template-columns:1fr;gap:24px;padding-bottom:64px;max-width:640px;margin:0 auto}
+/* ── GROUP ── */
+.gallery{max-width:640px;margin:0 auto;padding-bottom:64px}
+.group{margin-bottom:44px}
+.group:last-child{margin-bottom:0}
+.group-header{
+  display:flex;align-items:baseline;gap:10px;
+  padding-bottom:10px;border-bottom:2px solid #f0f0f0;margin-bottom:14px;
+}
+.group-header .num{font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--ink-3);min-width:28px}
+.group-header h2{font-size:17px;font-weight:700;color:var(--ink)}
+.group-header .summary{margin-left:auto;font-size:12px;color:var(--ink-3);font-weight:500;white-space:nowrap}
+.group-cards{display:grid;grid-template-columns:1fr;gap:10px}
+
+/* ── CARD ── */
 .card{
-  border:1px solid #eee;border-radius:12px;overflow:hidden;
+  border:1px solid #eee;border-radius:10px;overflow:hidden;
   background:#fff;transition:.2s;text-decoration:none;color:inherit;
   display:flex;flex-direction:column;
 }
-.card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.05)}
 
 .card-img{
-  width:100%;aspect-ratio:16/10;object-fit:cover;display:block;
+  width:100%;aspect-ratio:16/9;object-fit:cover;display:block;
   background:#f5f5f5;
 }
-.card-body{padding:20px 24px 24px;flex:1;display:flex;flex-direction:column}
+.card-body{padding:16px 20px 20px;flex:1;display:flex;flex-direction:column}
 
-.card-tag{
-  font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:8px;
+.card-num{
+  font-family:var(--font-mono);font-size:11px;font-weight:500;
+  color:var(--ink-3);margin-bottom:4px;
 }
 .card-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.card-hero .num{font-size:clamp(28px,3.5vw,40px);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--accent)}
-.card-hero .num-sub{font-size:15px;font-weight:600;color:var(--ink-2)}
-.card-metric{font-size:14px;color:var(--ink-2);margin-top:6px;line-height:1.4}
-.card-desc{font-size:14px;color:var(--ink-2);margin-top:12px;line-height:1.6;flex:1;max-width:52ch}
+.card-hero .num{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--accent)}
+.card-hero .num-sub{font-size:14px;font-weight:600;color:var(--ink-2)}
+.card-metric{font-size:13px;color:var(--ink-2);margin-top:4px;line-height:1.4}
+.card-desc{font-size:13.5px;color:var(--ink-2);margin-top:10px;line-height:1.6;flex:1;max-width:52ch}
 .card-desc .hl{color:var(--ink);font-weight:500}
-.card-badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:14px}
+.card-badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
 .card-badges .bdg{
-  display:inline-block;padding:3px 10px;border-radius:999px;
-  font-size:11px;font-weight:500;background:#f5f5f5;color:var(--ink-2);
+  display:inline-block;padding:2px 9px;border-radius:999px;
+  font-size:10.5px;font-weight:500;background:#f5f5f5;color:var(--ink-2);
 }
 
 /* ── FOOTER ── */
@@ -69,10 +81,12 @@ footer a:hover{color:var(--accent)}
 @media(max-width:700px){
   .wrap{padding:0 16px}
   header{padding:56px 0 32px}
-  .card-grid{grid-template-columns:1fr;gap:16px}
+  .group{margin-bottom:36px}
+  .group-header h2{font-size:16px}
+  .group-cards{gap:8px}
   .card-img{aspect-ratio:16/9}
-  .card-body{padding:16px 18px 20px}
-  .card-hero .num{font-size:26px}
+  .card-body{padding:14px 16px 18px}
+  .card-hero .num{font-size:24px}
   footer{flex-direction:column;align-items:flex-start}
 }
 
@@ -92,132 +106,160 @@ footer a:hover{color:var(--accent)}
     <p class="subtitle">從流量成長到廣告優化，以下 8 則案例濃縮我在內容行銷與數據驅動上的實戰成果。</p>
   </header>
 
-  <div class="card-grid">
+  <div class="gallery">
 
-    <!-- 01 — GA4 2022 -->
-    <a class="card" href="assets/ga-2022.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/ga-2022.png" alt="GA4 2022 流量報表" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">01 · 流量成長</div>
-        <div class="card-hero"><span class="num">5,447</span><span class="num-sub">月活躍使用者</span></div>
-        <div class="card-metric">自然搜尋 2,495 · 接手基準線（2022.06）</div>
-        <div class="card-desc">接手藝瓦官網時流量處於低谷。<span class="hl">以 SEO 內容盤點為起點</span>，重新擬定關鍵字策略與部落格排程。</div>
-        <div class="card-badges">
-          <span class="bdg">SEO 架構重整</span>
-          <span class="bdg">內容策略</span>
-          <span class="bdg">關鍵字研究</span>
-        </div>
+    <!-- ════ GROUP 01 — 流量成長 ════ -->
+    <section class="group">
+      <div class="group-header">
+        <span class="num">01</span>
+        <h2>流量成長</h2>
+        <span class="summary">3 年 · 月活躍使用者 +248%</span>
       </div>
-    </a>
+      <div class="group-cards">
 
-    <!-- 02 — GA4 2024 -->
-    <a class="card" href="assets/ga-2024.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/ga-2024.png" alt="GA4 2024 流量報表" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">02 · 流量成長</div>
-        <div class="card-hero"><span class="num">10,352</span><span class="num-sub">月活躍使用者</span></div>
-        <div class="card-metric">自然搜尋 7,532 · +90% vs 2022 基線</div>
-        <div class="card-desc">持續投入 SEO 內容與社群導流，自然搜尋佔比從 46% 提升至 73%。<span class="hl">內容品質提升帶動頁面收錄速度</span>，長尾關鍵字開始發酵。</div>
-        <div class="card-badges">
-          <span class="bdg">自然搜尋佔比 73%</span>
-          <span class="bdg">長尾關鍵字發酵</span>
-        </div>
-      </div>
-    </a>
+        <a class="card" href="assets/ga-2022.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/ga-2022.png" alt="GA4 2022 流量報表" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">2022 · 接手基準線</div>
+            <div class="card-hero"><span class="num">5,447</span><span class="num-sub">月活躍使用者</span></div>
+            <div class="card-metric">自然搜尋 2,495</div>
+            <div class="card-desc">接手藝瓦官網時流量處於低谷。<span class="hl">以 SEO 內容盤點為起點</span>，重新擬定關鍵字策略與部落格排程。</div>
+            <div class="card-badges">
+              <span class="bdg">SEO 架構重整</span>
+              <span class="bdg">內容策略</span>
+              <span class="bdg">關鍵字研究</span>
+            </div>
+          </div>
+        </a>
 
-    <!-- 03 — GA4 2025 -->
-    <a class="card" href="assets/ga-2025.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/ga-2025.png" alt="GA4 2025 流量報表" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">03 · 流量成長</div>
-        <div class="card-hero"><span class="num">18,954</span><span class="num-sub">月活躍使用者</span></div>
-        <div class="card-metric">自然搜尋 11,032 · +248% 較接手時 · 排名 Top 7 關鍵詞</div>
-        <div class="card-desc">SEO 內容 + 廣告雙管齊下，關鍵詞平均排名推進至前 7 名，流量年增率維持 <span class="hl">80%+</span>。自然與付費渠道形成正向循環。</div>
-        <div class="card-badges">
-          <span class="bdg">年增率 80%+</span>
-          <span class="bdg">關鍵詞 Top 7</span>
-          <span class="bdg">自然＋付費雙驅動</span>
-        </div>
-      </div>
-    </a>
+        <a class="card" href="assets/ga-2024.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/ga-2024.png" alt="GA4 2024 流量報表" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">2024 · 成長期</div>
+            <div class="card-hero"><span class="num">10,352</span><span class="num-sub">月活躍使用者</span></div>
+            <div class="card-metric">自然搜尋 7,532 · +90% vs 2022</div>
+            <div class="card-desc">持續投入 SEO 內容與社群導流，自然搜尋佔比從 46% 提升至 73%。<span class="hl">內容品質提升帶動頁面收錄速度</span>，長尾關鍵字開始發酵。</div>
+            <div class="card-badges">
+              <span class="bdg">自然搜尋佔比 73%</span>
+              <span class="bdg">長尾關鍵字發酵</span>
+            </div>
+          </div>
+        </a>
 
-    <!-- 04 — YouTube -->
-    <a class="card" href="assets/yt-channel.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/yt-channel.png" alt="YouTube 頻道" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">04 · 社群經營</div>
-        <div class="card-hero"><span class="num">2,650</span><span class="num-sub">YouTube 訂閱</span></div>
-        <div class="card-metric">62 部長片 · 室內設計知識型內容</div>
-        <div class="card-desc">從零經營「藝瓦・EHO設計」頻道，<span class="hl">以居家設計知識內容建立信任</span>，搭配 SEO 優化影片標題與描述，帶動自然搜尋曝光。</div>
-        <div class="card-badges">
-          <span class="bdg">知識型內容</span>
-          <span class="bdg">SEO 標題優化</span>
-        </div>
-      </div>
-    </a>
+        <a class="card" href="assets/ga-2025.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/ga-2025.png" alt="GA4 2025 流量報表" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">2025 · 成熟期</div>
+            <div class="card-hero"><span class="num">18,954</span><span class="num-sub">月活躍使用者</span></div>
+            <div class="card-metric">自然搜尋 11,032 · +248% 較接手時 · Top 7 關鍵詞</div>
+            <div class="card-desc">SEO 內容 + 廣告雙管齊下，關鍵詞平均排名推進至前 7 名，流量年增率維持 <span class="hl">80%+</span>。自然與付費渠道形成正向循環。</div>
+            <div class="card-badges">
+              <span class="bdg">年增率 80%+</span>
+              <span class="bdg">關鍵詞 Top 7</span>
+              <span class="bdg">自然＋付費雙驅動</span>
+            </div>
+          </div>
+        </a>
 
-    <!-- 05 — Facebook -->
-    <a class="card" href="assets/fb-page.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/fb-page.png" alt="Facebook 粉絲專頁" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">05 · 社群經營</div>
-        <div class="card-hero"><span class="num">1.2 萬</span><span class="num-sub">Facebook 追蹤者</span></div>
-        <div class="card-metric">藝瓦室內設計 · 品牌社群觸及</div>
-        <div class="card-desc">透過設計案例分享、裝修知識貼文與限時動態，<span class="hl">維持穩定互動率</span>，累積品牌忠實追蹤群。</div>
-        <div class="card-badges">
-          <span class="bdg">案例分享</span>
-          <span class="bdg">品牌互動</span>
-        </div>
       </div>
-    </a>
+    </section>
 
-    <!-- 06 — CPA -->
-    <a class="card" href="assets/ad-cpa-comparison.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/ad-cpa-comparison.png" alt="CPA 對比報表" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">06 · 廣告投放</div>
-        <div class="card-hero"><span class="num">-40%</span><span class="num-sub">CPA 降幅</span></div>
-        <div class="card-metric">46,419 次觀看 · 單次轉換費用優化</div>
-        <div class="card-desc">透過關鍵字比對與排除設定，<span class="hl">逐步降低無效點擊</span>，將廣告預算集中在高轉換意圖的搜尋詞上。</div>
-        <div class="card-badges">
-          <span class="bdg">關鍵字比對</span>
-          <span class="bdg">負關鍵字策略</span>
-          <span class="bdg">轉換追蹤</span>
-        </div>
+    <!-- ════ GROUP 02 — 社群經營 ════ -->
+    <section class="group">
+      <div class="group-header">
+        <span class="num">02</span>
+        <h2>社群經營</h2>
+        <span class="summary">YouTube · Facebook</span>
       </div>
-    </a>
+      <div class="group-cards">
 
-    <!-- 07 — 轉換成長 -->
-    <a class="card" href="assets/ad-conversion-forecast.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/ad-conversion-forecast.png" alt="轉換預測報表" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">07 · 廣告投放</div>
-        <div class="card-hero"><span class="num">+122%</span><span class="num-sub">轉換成長</span></div>
-        <div class="card-metric">費用僅 +38% · 導入多重轉換目標</div>
-        <div class="card-desc">導入多重轉換目標（來電、表單、LINE 諮詢），<span class="hl">以數據驅動分配預算</span>，轉換效率大幅躍升，同時控制成本增幅。</div>
-        <div class="card-badges">
-          <span class="bdg">多重轉換目標</span>
-          <span class="bdg">預算分配優化</span>
-          <span class="bdg">效率 +84%</span>
-        </div>
-      </div>
-    </a>
+        <a class="card" href="assets/yt-channel.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/yt-channel.png" alt="YouTube 頻道" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">YouTube 頻道</div>
+            <div class="card-hero"><span class="num">2,650</span><span class="num-sub">訂閱</span></div>
+            <div class="card-metric">62 部長片 · 室內設計知識型內容</div>
+            <div class="card-desc">從零經營「藝瓦・EHO設計」頻道，<span class="hl">以居家設計知識內容建立信任</span>，搭配 SEO 優化影片標題與描述，帶動自然搜尋曝光。</div>
+            <div class="card-badges">
+              <span class="bdg">知識型內容</span>
+              <span class="bdg">SEO 標題優化</span>
+            </div>
+          </div>
+        </a>
 
-    <!-- 08 — 諮詢 -->
-    <a class="card" href="assets/ad-weekly-consultations.png" target="_blank" rel="noopener">
-      <img class="card-img" src="assets/ad-weekly-consultations.png" alt="每週諮詢報表" loading="lazy">
-      <div class="card-body">
-        <div class="card-tag">08 · 廣告投放</div>
-        <div class="card-hero"><span class="num">穩定成長</span></div>
-        <div class="card-metric">每週諮詢進線量 · 淡旺季動態預算</div>
-        <div class="card-desc"><span class="hl">廣告不只帶來流量，更帶進真實諮詢。</span>根據裝修淡旺季靈活調配預算，維持每週穩定進線量。</div>
-        <div class="card-badges">
-          <span class="bdg">淡旺季策略</span>
-          <span class="bdg">預算調配</span>
-          <span class="bdg">ROI 追蹤</span>
-        </div>
+        <a class="card" href="assets/fb-page.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/fb-page.png" alt="Facebook 粉絲專頁" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">Facebook 粉絲專頁</div>
+            <div class="card-hero"><span class="num">1.2 萬</span><span class="num-sub">追蹤者</span></div>
+            <div class="card-metric">藝瓦室內設計 · 品牌社群觸及</div>
+            <div class="card-desc">透過設計案例分享、裝修知識貼文與限時動態，<span class="hl">維持穩定互動率</span>，累積品牌忠實追蹤群。</div>
+            <div class="card-badges">
+              <span class="bdg">案例分享</span>
+              <span class="bdg">品牌互動</span>
+            </div>
+          </div>
+        </a>
+
       </div>
-    </a>
+    </section>
+
+    <!-- ════ GROUP 03 — 廣告投放 ════ -->
+    <section class="group">
+      <div class="group-header">
+        <span class="num">03</span>
+        <h2>廣告投放</h2>
+        <span class="summary">CPA -40% · 轉換 +122%</span>
+      </div>
+      <div class="group-cards">
+
+        <a class="card" href="assets/ad-cpa-comparison.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/ad-cpa-comparison.png" alt="CPA 對比報表" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">CPA 優化</div>
+            <div class="card-hero"><span class="num">-40%</span><span class="num-sub">CPA 降幅</span></div>
+            <div class="card-metric">46,419 次觀看 · 單次轉換費用優化</div>
+            <div class="card-desc">透過關鍵字比對與排除設定，<span class="hl">逐步降低無效點擊</span>，將廣告預算集中在高轉換意圖的搜尋詞上。</div>
+            <div class="card-badges">
+              <span class="bdg">關鍵字比對</span>
+              <span class="bdg">負關鍵字策略</span>
+              <span class="bdg">轉換追蹤</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="assets/ad-conversion-forecast.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/ad-conversion-forecast.png" alt="轉換預測報表" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">轉換成長</div>
+            <div class="card-hero"><span class="num">+122%</span><span class="num-sub">轉換成長</span></div>
+            <div class="card-metric">費用僅 +38% · 導入多重轉換目標</div>
+            <div class="card-desc">導入多重轉換目標（來電、表單、LINE 諮詢），<span class="hl">以數據驅動分配預算</span>，轉換效率大幅躍升，同時控制成本增幅。</div>
+            <div class="card-badges">
+              <span class="bdg">多重轉換目標</span>
+              <span class="bdg">預算分配優化</span>
+              <span class="bdg">效率 +84%</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="assets/ad-weekly-consultations.png" target="_blank" rel="noopener">
+          <img class="card-img" src="assets/ad-weekly-consultations.png" alt="每週諮詢報表" loading="lazy">
+          <div class="card-body">
+            <div class="card-num">諮詢進線</div>
+            <div class="card-hero"><span class="num">穩定成長</span></div>
+            <div class="card-metric">每週諮詢進線量 · 淡旺季動態預算</div>
+            <div class="card-desc"><span class="hl">廣告不只帶來流量，更帶進真實諮詢。</span>根據裝修淡旺季靈活調配預算，維持每週穩定進線量。</div>
+            <div class="card-badges">
+              <span class="bdg">淡旺季策略</span>
+              <span class="bdg">預算調配</span>
+              <span class="bdg">ROI 追蹤</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
 
   </div>
 
