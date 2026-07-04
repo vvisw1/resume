@@ -62,6 +62,10 @@
   .hero-nav a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
   .hero-nav a .a{color:var(--accent);margin-left:6px}
 
+  /* ── 頭像 ── */
+  .avatar{width:116px;height:116px;border-radius:50%;object-fit:cover;display:block;margin-bottom:26px;
+    box-shadow:0 4px 18px rgba(23,21,15,.14);background:var(--paper-2)}
+
   /* ── 數據卡 ── */
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:#fff}
   .stat{padding:30px 26px;border-right:1px solid var(--line)}
@@ -133,6 +137,7 @@
 
   <!-- ░░ HERO ░░ -->
   <header>
+    <img class="avatar" src="assets/portrait.jpg" alt="楊旻瑾 個人照" width="116" height="116">
     <div class="eyebrow">內容行銷人 · Content Marketer</div>
     <h1>楊旻瑾
       <span class="sub">用內容與數據，把流量轉成收益。</span>
