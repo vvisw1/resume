@@ -12,121 +12,131 @@
 <meta property="og:url" content="https://vvisw1.github.io/resume/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://vvisw1.github.io/resume/assets/og-cover.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23C75B27'/%3E%3Ctext%20x='32'%20y='45'%20font-size='40'%20text-anchor='middle'%20fill='white'%20font-family='sans-serif'%20font-weight='700'%3E%E6%A5%8A%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%236A4C7D'/%3E%3Ctext%20x='32'%20y='45'%20font-size='40'%20text-anchor='middle'%20fill='white'%20font-family='serif'%20font-weight='700'%3E%E6%A5%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#17150F;          /* 近黑（暖） */
-    --ink-2:#3D3A33;        /* 次要文字 */
-    --ink-3:#8A857A;        /* 輔助灰 */
-    --line:#E3DFD6;         /* 髮絲線 */
-    --paper:#FBFAF7;        /* 紙白 */
-    --paper-2:#F3F1EA;      /* 區塊底 */
-    --accent:#C75B27;       /* 單一強調色：磚橘 */
-    --accent-soft:#F4E6DC;
+    --paper:#F4F2F1;        /* 中性暖灰白 */
+    --paper-2:#EAE6E8;      /* 區塊底 */
+    --ink:#1E1922;          /* 帶紫近黑 */
+    --ink-2:#4A4550;        /* 次要文字 */
+    --ink-3:#8B8590;        /* 輔助灰 */
+    --line:#E4DEE3;         /* 髮絲線 */
+    --accent:#6A4C7D;       /* 深李子紫 */
+    --accent-dim:#573E67;   /* hover 深階 */
+    --accent-soft:#EFE9F1;  /* 淡紫底 */
+    --data:#9A88A8;         /* 同色系淡紫（刻度） */
+    --serif:"Noto Serif TC",Georgia,serif;
+    --sans:"Noto Sans TC",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",monospace;
     --max:1080px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:"Noto Sans TC","Helvetica Neue",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
-    background:var(--paper);color:var(--ink);
+    font-family:var(--sans);background:var(--paper);color:var(--ink);
     line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;
     font-feature-settings:"tnum";
   }
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
+  a{color:inherit}
 
-  /* ── 區塊標題：序號 + 小標 ── */
-  .sec{padding:72px 0;border-top:1px solid var(--line)}
+  /* ── 區塊標題：中文宋體 + 英文等寬（不用編號） ── */
+  .sec{padding:64px 0;border-top:1px solid var(--line)}
   .sec:first-of-type{border-top:none}
-  .sec-label{
-    display:flex;align-items:baseline;gap:14px;margin-bottom:40px;
-    font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);
-  }
-  .sec-label .no{color:var(--accent);font-weight:700}
-  .sec-label .ln{flex:1;height:1px;background:var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px;border-bottom:1px solid var(--line);padding-bottom:16px}
+  .sec-head .zh{font-family:var(--serif);font-weight:700;font-size:clamp(23px,3.4vw,29px);color:var(--ink);letter-spacing:.01em}
+  .sec-head .en{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3)}
+  .sec-head .ln{flex:1;height:1px;background:var(--line)}
 
   /* ── HERO ── */
-  header{padding:96px 0 64px;display:grid;grid-template-columns:1fr clamp(230px,30%,310px);gap:clamp(32px,5vw,60px);align-items:center}
-  .eyebrow{font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
-  h1{font-size:clamp(48px,9vw,104px);line-height:.98;font-weight:800;letter-spacing:-.02em}
-  h1 .sub{display:block;font-size:clamp(20px,3.4vw,34px);font-weight:600;color:var(--ink-2);letter-spacing:0;margin-top:18px;line-height:1.3}
-  .lede{max-width:62ch;margin-top:30px;font-size:clamp(17px,2.1vw,20px);color:var(--ink-2)}
-  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-size:15px;color:var(--ink-2)}
+  header{padding:84px 0 60px;display:grid;grid-template-columns:1fr clamp(230px,30%,300px);gap:clamp(32px,5vw,60px);align-items:center}
+  .eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:26px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);flex-shrink:0}
+  h1{font-family:var(--serif);font-size:clamp(60px,10vw,116px);line-height:.92;font-weight:900;letter-spacing:.01em}
+  h1 .sub{display:block;font-family:var(--serif);font-size:clamp(21px,3.4vw,32px);font-weight:500;color:var(--ink-2);letter-spacing:0;margin-top:20px;line-height:1.35}
+  .lede{max-width:54ch;margin-top:26px;font-size:clamp(16px,2vw,18px);color:var(--ink-2)}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:30px;font-family:var(--mono);font-size:13.5px;color:var(--ink-2)}
   .meta a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px}
   .meta a:hover{color:var(--accent)}
-  .meta .k{color:var(--ink-3);margin-right:8px}
+  .meta .k{color:var(--ink-3);margin-right:8px;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
 
   /* ── HERO 導覽 ── */
   .hero-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-  .hero-nav a{font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:9px 18px;transition:.18s}
+  .hero-nav a{font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:3px;padding:9px 16px;transition:.18s;background:#fff}
   .hero-nav a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
-  .hero-nav a .a{color:var(--accent);margin-left:6px}
+  .hero-nav a .a{font-family:var(--mono);color:var(--accent);margin-left:8px}
 
   /* ── HERO 照片卡 ── */
   .hero-photo{justify-self:end}
-  .hero-photo img{width:100%;max-width:310px;height:auto;display:block;border-radius:20px;
-    box-shadow:0 14px 36px rgba(23,21,15,.18);background:var(--paper-2)}
+  .hero-photo img{width:100%;max-width:300px;height:auto;display:block;border-radius:4px;
+    box-shadow:0 14px 36px rgba(30,25,34,.20);background:var(--paper-2)}
+  .hero-photo .cap{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:10px;text-align:right}
 
-  /* ── 數據卡 ── */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:#fff}
-  .stat{padding:30px 26px;border-right:1px solid var(--line)}
-  .stat:last-child{border-right:none}
-  .stat .num{font-size:clamp(38px,5.4vw,56px);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--ink)}
-  .stat .num b{color:var(--accent);font-weight:800}
-  .stat .cap{margin-top:12px;font-size:13.5px;color:var(--ink-3);line-height:1.5}
-  .stats-note{margin-top:14px;font-size:12.5px;color:var(--ink-3)}
+  /* ── 招牌：數據排版物件 ── */
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+  .metric{padding:26px 24px 24px;border-right:1px solid var(--line)}
+  .metric:last-child{border-right:none}
+  .metric .fig{font-family:var(--mono);font-weight:600;font-size:clamp(34px,5vw,46px);line-height:1;letter-spacing:-.01em;color:var(--ink);display:flex;align-items:baseline;gap:2px}
+  .metric .fig .u{font-size:.5em;color:var(--accent);font-weight:500}
+  .metric .tick{margin:14px 0 12px;height:8px;display:flex;align-items:flex-end;gap:3px}
+  .metric .tick i{width:6px;background:var(--data);border-radius:1px;display:block}
+  .metric .lab{font-size:12.5px;color:var(--ink-3);line-height:1.5}
+  .metric .lab b{font-family:var(--mono);color:var(--ink-2);font-weight:500;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:4px}
+  .stats-note{margin-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.01em}
 
   /* ── 經歷 ── */
-  .job{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
+  .job{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:32px 0;border-top:1px solid var(--line)}
   .job:first-child{border-top:none;padding-top:0}
-  .job .when{font-size:14px;color:var(--ink-3);letter-spacing:.02em}
-  .job .when .now{display:inline-block;margin-top:6px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:2px 10px}
-  .job h3{font-size:21px;font-weight:700;letter-spacing:-.01em}
+  .job .when{font-family:var(--mono);font-size:13px;color:var(--ink-3);letter-spacing:.01em;padding-top:5px}
+  .job .when .now{display:inline-block;margin-top:8px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:2px 8px}
+  .job h3{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:0}
   .job .org{margin-top:4px;font-size:15px;color:var(--ink-2)}
-  .job ul{margin-top:14px;padding-left:0;list-style:none;display:grid;gap:8px}
+  .job ul{margin-top:14px;padding-left:0;list-style:none;display:grid;gap:9px}
   .job li{position:relative;padding-left:20px;color:var(--ink-2);font-size:15px}
-  .job li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:1.5px;background:var(--accent)}
-  .job li b{color:var(--ink);font-weight:600}
-  .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
-  .tag{font-size:12.5px;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+  .job li::before{content:"";position:absolute;left:2px;top:12px;width:7px;height:1.5px;background:var(--accent)}
+  .job li b{color:var(--ink);font-weight:500}
+  .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
+  .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--ink-2);background:#fff;border:1px solid var(--line);border-radius:2px;padding:4px 10px}
 
   /* ── 技能 ── */
-  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 48px}
-  .skill h4{font-size:14px;letter-spacing:.04em;color:var(--accent);margin-bottom:12px;font-weight:700}
+  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 48px}
+  .skill h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:500}
   .skill p{color:var(--ink-2);font-size:15px}
 
   /* ── 作品連結 ── */
-  .links{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .links{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
   .lk{display:flex;justify-content:space-between;align-items:center;gap:16px;
-      padding:22px 24px;border:1px solid var(--line);background:#fff;text-decoration:none;color:inherit;transition:.18s}
+      padding:22px 24px;border:1px solid var(--line);background:#fff;text-decoration:none;color:inherit;transition:.18s;border-radius:4px}
   .lk:hover{border-color:var(--accent);transform:translateY(-2px)}
-  .lk .t{font-weight:700;font-size:16px}
-  .lk .d{display:block;font-size:13.5px;color:var(--ink-3);margin-top:8px}
-  .lk .arrow{color:var(--accent);font-size:20px;flex-shrink:0}
-
+  .lk .t{font-family:var(--serif);font-weight:700;font-size:17px}
+  .lk .d{display:block;font-size:13px;color:var(--ink-3);margin-top:8px}
+  .lk .arrow{font-family:var(--mono);color:var(--accent);font-size:18px;flex-shrink:0}
 
   /* ── 學歷/語言 簡列 ── */
-  .row{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:18px 0;border-top:1px solid var(--line);font-size:15px}
+  .row{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:18px 0;border-top:1px solid var(--line);font-size:15px}
   .row:first-child{border-top:none}
-  .row .lab{color:var(--ink-3)}
+  .row .lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding-top:2px}
   .row .val b{font-weight:700}
   .row .val .muted{color:var(--ink-3)}
 
-  footer{padding:60px 0 80px;border-top:1px solid var(--line);color:var(--ink-3);font-size:13.5px}
+  footer{padding:56px 0 80px;border-top:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:12.5px;letter-spacing:.01em;line-height:1.9}
   footer a{color:var(--ink-2)}
 
   @media(max-width:720px){
     .wrap{padding:0 22px}
-    .stats{grid-template-columns:repeat(2,1fr)}
-    .stat:nth-child(2){border-right:none}
-    .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+    .metrics{grid-template-columns:repeat(2,1fr)}
+    .metric:nth-child(2){border-right:none}
+    .metric:nth-child(1),.metric:nth-child(2){border-bottom:1px solid var(--line)}
     .job,.row{grid-template-columns:1fr;gap:10px}
     .job .when .now{margin-top:0}
     .skills,.links{grid-template-columns:1fr}
-    header{padding:64px 0 40px;grid-template-columns:1fr;gap:26px}
+    header{padding:56px 0 40px;grid-template-columns:1fr;gap:26px}
     .hero-photo{order:-1;justify-self:start}
-    .hero-photo img{max-width:172px}
-    .sec{padding:56px 0}
+    .hero-photo img{max-width:168px}
+    .sec{padding:52px 0}
   }
   @media print{
     body{background:#fff;font-size:12px}
@@ -141,7 +151,7 @@
   <!-- ░░ HERO ░░ -->
   <header>
     <div class="hero-text">
-    <div class="eyebrow">內容行銷人 · Content Marketer</div>
+    <div class="eyebrow">內容行銷人 · Content Marketer · SEO / Ads</div>
     <h1>楊旻瑾
       <span class="sub">用內容與數據，把流量轉成收益。</span>
     </h1>
@@ -161,40 +171,45 @@
     </nav>
     </div>
     <div class="hero-photo">
-      <img src="assets/portrait-card.jpg" alt="楊旻瑾 個人照" width="310" height="388">
+      <img src="assets/portrait-card.jpg" alt="楊旻瑾 個人照" width="300" height="375">
+      <div class="cap">Kaohsiung · 2026</div>
     </div>
   </header>
 
   <!-- ░░ 數據成績 ░░ -->
   <section class="sec" id="impact">
-    <div class="sec-label"><span class="no">01</span><span>成效數據 · Impact</span><span class="ln"></span></div>
-    <div class="stats">
-      <div class="stat">
-        <div class="num"><b>3.5×</b></div>
-        <div class="cap">藝瓦官網月活躍使用者<br>（接手後約 5,400 → 19,000）</div>
+    <div class="sec-head"><span class="zh">成效數據</span><span class="en">Impact</span><span class="ln"></span></div>
+    <div class="metrics">
+      <div class="metric">
+        <div class="fig">3.5<span class="u">×</span></div>
+        <div class="tick"><i style="height:2px"></i><i style="height:3px"></i><i style="height:5px"></i><i style="height:8px"></i></div>
+        <div class="lab"><b>Traffic</b>官網月活躍使用者成長<br>（接手後約 5,400 → 19,000）</div>
       </div>
-      <div class="stat">
-        <div class="num"><b>4×</b></div>
-        <div class="cap">自然搜尋流量成長<br>主要來自 SEO 內容策略</div>
+      <div class="metric">
+        <div class="fig">4<span class="u">×</span></div>
+        <div class="tick"><i style="height:2px"></i><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i></div>
+        <div class="lab"><b>Organic</b>自然搜尋流量成長<br>主要來自 SEO 內容策略</div>
       </div>
-      <div class="stat">
-        <div class="num">1.2<span style="font-size:.5em">萬</span></div>
-        <div class="cap">Facebook 粉專追蹤者<br>YouTube 2,650 訂閱 · 62 部長片（2023.05 起策劃）</div>
+      <div class="metric">
+        <div class="fig">1.2<span class="u">萬</span></div>
+        <div class="tick"><i style="height:3px"></i><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i></div>
+        <div class="lab"><b>Social</b>Facebook 粉專追蹤<br>YouTube 2,650 訂閱 · 62 部長片</div>
       </div>
-      <div class="stat">
-        <div class="num"><b>−40%</b></div>
-        <div class="cap">廣告單次轉換成本（CPA）<br>以 Target CPA 策略優化並穩定</div>
+      <div class="metric">
+        <div class="fig">−40<span class="u">%</span></div>
+        <div class="tick"><i style="height:8px"></i><i style="height:6px"></i><i style="height:4px"></i><i style="height:2px"></i></div>
+        <div class="lab"><b>Ad CPA</b>廣告單次轉換成本下降<br>以 Target CPA 策略優化並穩定</div>
       </div>
     </div>
-    <p class="stats-note">＊數據取自 GA4 與各平台後台；廣告成本以相對降幅呈現。</p>
+    <p class="stats-note">＊ 數據取自 GA4 與各平台後台；廣告成本以相對降幅呈現。</p>
   </section>
 
   <!-- ░░ 經歷 ░░ -->
   <section class="sec" id="experience">
-    <div class="sec-label"><span class="no">02</span><span>工作經歷 · Experience</span><span class="ln"></span></div>
+    <div class="sec-head"><span class="zh">工作經歷</span><span class="en">Experience</span><span class="ln"></span></div>
 
     <div class="job">
-      <div class="when">2022.06 – 2026.04</div>
+      <div class="when">2022.06 — 2026.04<span class="now">Recent</span></div>
       <div class="body">
         <h3>網站行銷企劃 → 行銷主管</h3>
         <div class="org">藝瓦室內設計（藝瓦室內裝修設計工程有限公司）· 高雄</div>
@@ -213,7 +228,7 @@
     </div>
 
     <div class="job">
-      <div class="when">2019.03 – 2022.03</div>
+      <div class="when">2019.03 — 2022.03</div>
       <div class="body">
         <h3>行銷業務</h3>
         <div class="org">台灣知識庫股份有限公司 · 高雄</div>
@@ -226,7 +241,7 @@
     </div>
 
     <div class="job">
-      <div class="when">2018.06 – 2018.09</div>
+      <div class="when">2018.06 — 2018.09</div>
       <div class="body">
         <h3>創意廣告文案企劃</h3>
         <div class="org">兆暘整合行銷管理顧問有限公司 · 高雄</div>
@@ -239,7 +254,7 @@
     </div>
 
     <div class="job">
-      <div class="when">2010.12 – 2013.06</div>
+      <div class="when">2010.12 — 2013.06</div>
       <div class="body">
         <h3>文字編輯</h3>
         <div class="org">好燙詩社（書籍出版）· 遠端</div>
@@ -253,7 +268,7 @@
 
   <!-- ░░ 專長 ░░ -->
   <section class="sec" id="skills">
-    <div class="sec-label"><span class="no">03</span><span>專業技能 · Skills</span><span class="ln"></span></div>
+    <div class="sec-head"><span class="zh">專業技能</span><span class="en">Skills</span><span class="ln"></span></div>
     <div class="skills">
       <div class="skill"><h4>數位廣告</h4><p>Google Ads（搜尋／DSA／GDN／品牌字防衛）、Meta 廣告；多縣市帳戶結構、Target CPA／手動出價／爭取轉換 策略切換。</p></div>
       <div class="skill"><h4>SEO 與內容</h4><p>關鍵字策略、長文撰寫、精選摘要（Featured Snippet）操作；10＋ 組關鍵字進 Google 第一頁／前兩頁。</p></div>
@@ -266,7 +281,7 @@
 
   <!-- ░░ 作品 ░░ -->
   <section class="sec" id="work">
-    <div class="sec-label"><span class="no">04</span><span>作品與平台 · Work</span><span class="ln"></span></div>
+    <div class="sec-head"><span class="zh">作品與平台</span><span class="en">Work</span><span class="ln"></span></div>
     <div class="links">
       <a class="lk" href="https://www.ewa.com.tw/" target="_blank" rel="noopener">
         <span><span class="t">藝瓦官網 · SEO 內容</span><span class="d">主導內容策略的官方網站</span></span><span class="arrow">↗</span></a>
@@ -276,10 +291,10 @@
         <span><span class="t">藝瓦 · Facebook 粉專</span><span class="d">經營至約 1.2 萬追蹤者</span></span><span class="arrow">↗</span></a>
       <a class="lk" href="https://www.linkedin.com/in/jinds/" target="_blank" rel="noopener">
         <span><span class="t">LinkedIn</span><span class="d">完整職涯與背景</span></span><span class="arrow">↗</span></a>
-      <a class="lk" href="portfolio.html">
-        <span><span class="t">作品畫廊</span><span class="d">GA4 流量成長 · YouTube · FB · 廣告成效截圖</span></span><span class="arrow">→</span></a>
       <a class="lk" href="ads.html">
         <span><span class="t">廣告操盤案例</span><span class="d">多縣市 Google Ads · CPA −40% · 轉換 +122%</span></span><span class="arrow">→</span></a>
+      <a class="lk" href="portfolio.html">
+        <span><span class="t">作品畫廊</span><span class="d">GA4 流量成長 · YouTube · FB · 廣告成效</span></span><span class="arrow">→</span></a>
       <a class="lk" href="seo.html">
         <span><span class="t">SEO 文章作品集</span><span class="d">10 篇文章 · 7 篇第一頁 · 含精選摘要</span></span><span class="arrow">→</span></a>
     </div>
@@ -287,17 +302,17 @@
 
   <!-- ░░ 學歷 / 其他 ░░ -->
   <section class="sec" id="about">
-    <div class="sec-label"><span class="no">05</span><span>學歷與其他 · More</span><span class="ln"></span></div>
-    <div class="row"><div class="lab">學歷</div><div class="val"><b>東海大學 中文系</b> <span class="muted">· 2009 – 2013 · 學士</span></div></div>
-    <div class="row"><div class="lab">語言</div><div class="val">中文（母語）· 台語（中等）· 英文（基礎）</div></div>
-    <div class="row"><div class="lab">證照</div><div class="val">防火管理人員</div></div>
-    <div class="row"><div class="lab">文字創作</div><div class="val">豐富的當代詩創作經驗</div></div>
-    <div class="row"><div class="lab">求職方向</div><div class="val">文案 · 編輯 · 社群經營 · 行銷企劃 <span class="muted">· 全職 / 可遠端</span></div></div>
+    <div class="sec-head"><span class="zh">學歷與其他</span><span class="en">More</span><span class="ln"></span></div>
+    <div class="row"><div class="lab">Education</div><div class="val"><b>東海大學 中文系</b> <span class="muted">· 2009 – 2013 · 學士</span></div></div>
+    <div class="row"><div class="lab">Languages</div><div class="val">中文（母語）· 台語（中等）· 英文（基礎）</div></div>
+    <div class="row"><div class="lab">Certificate</div><div class="val">防火管理人員</div></div>
+    <div class="row"><div class="lab">Writing</div><div class="val">豐富的當代詩創作經驗</div></div>
+    <div class="row"><div class="lab">Seeking</div><div class="val">文案 · 編輯 · 社群經營 · 行銷企劃 <span class="muted">· 全職 / 可遠端</span></div></div>
   </section>
 
   <footer>
-    楊旻瑾 · 內容行銷人 ｜ <a href="mailto:vvisw1@gmail.com">vvisw1@gmail.com</a> ｜ 高雄，可遠端<br>
-    本頁為個人履歷概況 · 最後更新 2026.06
+    楊旻瑾 · 內容行銷人　｜　<a href="mailto:vvisw1@gmail.com">vvisw1@gmail.com</a>　｜　高雄，可遠端<br>
+    本頁為個人履歷概況 · 最後更新 2026.07
   </footer>
 
 </div>
