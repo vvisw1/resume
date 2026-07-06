@@ -69,6 +69,13 @@
   .hero-nav a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
   .hero-nav a .a{font-family:var(--mono);color:var(--accent);margin-left:8px}
 
+  /* ── 下載 PDF ── */
+  .hero-actions{margin-top:16px}
+  .btn-print{font-family:var(--sans);font-size:14px;font-weight:500;color:#fff;background:var(--accent);border:none;border-radius:3px;padding:10px 20px;cursor:pointer;transition:.18s;display:inline-flex;align-items:center;gap:8px;letter-spacing:.02em}
+  .btn-print:hover{background:var(--accent-dim);transform:translateY(-1px)}
+  .btn-print:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .btn-print .ico{font-family:var(--mono);font-size:15px;line-height:1}
+
   /* ── HERO 照片卡 ── */
   .hero-photo{justify-self:end}
   .hero-photo img{width:100%;max-width:300px;height:auto;display:block;border-radius:4px;
@@ -142,6 +149,8 @@
     body{background:#fff;font-size:12px}
     .lk:hover,.lk{transform:none}
     .sec,header{padding:24px 0}
+    .hero-actions,.hero-nav{display:none}
+    .job,.metric,.skill,.lk{break-inside:avoid}
   }
 </style>
 </head>
@@ -170,6 +179,11 @@
       <a href="seo.html">SEO 文章作品集<span class="a">→</span></a>
       <a href="projects.html">個人專案<span class="a">→</span></a>
     </nav>
+    <div class="hero-actions">
+      <button type="button" class="btn-print" onclick="window.print()" title="開啟列印視窗，選擇「另存新檔／儲存為 PDF」即可下載">
+        <span class="ico" aria-hidden="true">↓</span> 下載 PDF（列印）
+      </button>
+    </div>
     </div>
     <div class="hero-photo">
       <img src="assets/portrait-card.jpg" alt="楊旻瑾 個人照" width="300" height="375">
