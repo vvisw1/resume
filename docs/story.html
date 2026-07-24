@@ -85,6 +85,23 @@ h1{font-family:var(--serif);font-size:clamp(34px,6.4vw,58px);line-height:1.14;fo
 .role.me{border-color:var(--accent);background:var(--accent-soft)}
 .role.me .what{color:var(--accent-dim);font-weight:500}
 
+/* ── EVIDENCE ── */
+.ev-label{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:2.2em 0 .9em;display:flex;align-items:center;gap:10px}
+.ev-label::before{content:"";width:18px;height:2px;background:var(--accent);flex-shrink:0}
+.ev-grid{display:grid;gap:12px}
+.ev-grid.c3{grid-template-columns:repeat(3,1fr);align-items:start}
+.ev-grid.c2{grid-template-columns:repeat(2,1fr);align-items:start}
+.ev-figure{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;display:block;text-decoration:none;color:inherit;transition:.2s}
+a.ev-figure:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 22px rgba(30,25,34,.08)}
+.ev-figure img{width:100%;height:auto;display:block}
+.ev-cap{padding:11px 15px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.55;display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.ev-cap .m{color:var(--accent);font-weight:600;white-space:nowrap}
+.ev-cap .go{color:var(--accent);white-space:nowrap}
+.ev-more{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin:.7em 0 0}
+.ev-more a{color:var(--accent);text-decoration:none}
+.ev-more a:hover{text-decoration:underline}
+.ev-more b{color:var(--accent);font-weight:600}
+
 /* ── CLOSING ── */
 .closing{padding:56px 0;border-top:1px solid var(--line)}
 .closing p{font-family:var(--serif);font-size:clamp(19px,2.6vw,24px);line-height:1.7;font-weight:500;color:var(--ink);max-width:56ch}
@@ -110,6 +127,7 @@ footer a:hover{color:var(--accent)}
   .chapter{padding:42px 0}
   .prose{font-size:16.5px;line-height:1.9}
   .role{grid-template-columns:52px 1fr;gap:12px}
+  .ev-grid.c3,.ev-grid.c2{grid-template-columns:1fr}
   footer{flex-direction:column;align-items:flex-start}
 }
 @media print{.back-link,.cta{display:none}.chapter,.frame,.pull,.role{break-inside:avoid}}
@@ -157,6 +175,23 @@ footer a:hover{color:var(--accent)}
 
       <h3>好貼文，是可以「學」的</h3>
       <p>每一則貼文，我都會追蹤<b>發布後第 7 天</b>的數據，主要看<span class="d">互動率</span>。長期經營下來，我們把互動率<span class="d">高於 3%</span>的貼文定義成「好貼文」，然後回頭研究它為什麼好，把心得用在下一批貼文上。短影音則看觀看數，特別去拆解那些<span class="d">破 10,000</span>次觀看的片子。對我來說，數據不是拿來交報告的，是拿來<b>複製成功</b>的。</p>
+
+      <div class="ev-label">現場證據 · 藝瓦官方粉專貼文</div>
+      <div class="ev-grid c3">
+        <a class="ev-figure" href="assets/ev-fb-1.jpg" target="_blank" rel="noopener">
+          <img src="assets/ev-fb-1.jpg" alt="藝瓦 FB 貼文：殷雄住宅案分享" loading="lazy">
+          <div class="ev-cap"><span>殷雄住宅案</span><span class="m">24 讚</span></div>
+        </a>
+        <a class="ev-figure" href="assets/ev-fb-2.jpg" target="_blank" rel="noopener">
+          <img src="assets/ev-fb-2.jpg" alt="藝瓦 FB 貼文：皇苑御之苑作品分享" loading="lazy">
+          <div class="ev-cap"><span>皇苑御之苑</span><span class="m">1,261 讚 · 244 分享</span></div>
+        </a>
+        <a class="ev-figure" href="assets/ev-fb-3.jpg" target="_blank" rel="noopener">
+          <img src="assets/ev-fb-3.jpg" alt="藝瓦 FB 貼文：御之苑 Uniqlo 般的現代簡約風" loading="lazy">
+          <div class="ev-cap"><span>御之苑・簡約風</span><span class="m">257 讚 · 32 分享</span></div>
+        </a>
+      </div>
+      <p class="ev-more"><a href="https://www.facebook.com/ewa.com.tw" target="_blank" rel="noopener">看完整粉專 →</a></p>
     </div>
   </section>
 
@@ -213,6 +248,28 @@ footer a:hover{color:var(--accent)}
       <p>後來公司要發展家具產業，我就自己<b>架了一個家具購物網站</b>：用 Cloudways 搭配 WordPress，金流用 WooCommerce 接綠界。它雖然是電商站，但我照樣安排 SEO 文章上架，讓<b>月流量很快穩定在 400 左右</b>。</p>
       <p>再後來，老闆為了進口家具又開了一間貿易公司。這次我沒用 WordPress，而是<b>試著用 AI 架站</b>。這個網站採前後端分離，用「詢價車」的方式服務客戶（不公開價格），支援中英雙語切換，後端用 Sanity 當內容後台——這樣只要指派一位網站管理員，就能持續維護內容，不必事事麻煩工程師，符合市面上常見的網站後台需求。整個官網的文案，不論是品牌故事還是商品頁，都由我一手包辦。</p>
 
+      <div class="ev-label">現場證據 · OurHome 家具官網（AI 架站）</div>
+      <a class="ev-figure" href="https://oh-ourhome.com/" target="_blank" rel="noopener">
+        <img src="assets/ev-oh-home.jpg" alt="OurHome 家具官網首頁" loading="lazy">
+        <div class="ev-cap"><span>前後端分離 · 中英雙語 · 詢價車</span><span class="go">oh-ourhome.com ↗</span></div>
+      </a>
+      <div class="ev-grid c2" style="margin-top:12px">
+        <a class="ev-figure" href="assets/ev-oh-product.jpg" target="_blank" rel="noopener">
+          <img src="assets/ev-oh-product.jpg" alt="OurHome 商品頁 · 送出詢價" loading="lazy">
+          <div class="ev-cap"><span>商品頁 · 送出詢價</span></div>
+        </a>
+        <a class="ev-figure" href="assets/ev-oh-cms.jpg" target="_blank" rel="noopener">
+          <img src="assets/ev-oh-cms.jpg" alt="Sanity CMS 後台 · 中英雙語欄位" loading="lazy">
+          <div class="ev-cap"><span>Sanity 後台 · 雙語自主維護</span></div>
+        </a>
+      </div>
+
+      <div class="ev-label">現場證據 · 另一個 AI 打造的購物站</div>
+      <a class="ev-figure" href="assets/ev-cuddleh.jpg" target="_blank" rel="noopener">
+        <img src="assets/ev-cuddleh.jpg" alt="cuddleh 選物電商網站" loading="lazy">
+        <div class="ev-cap"><span>cuddleh · 選物電商 · 購物車／超商取貨／訂單查詢</span></div>
+      </a>
+
       <h3>順手寫的廣告轉換頁</h3>
       <p>因為廣告要導流到官網，轉換頁也是我在寫。官網的編輯器有限，只能用 HTML + CSS，做不出太動態的東西，但我反而更專注在一件事上：<b>一個頁面，只留一個轉換動作</b>。如果目標是填表單，那整頁就只會有一個行動呼籲——點擊、填表，沒有別的分心選項。</p>
     </div>
@@ -255,6 +312,27 @@ footer a:hover{color:var(--accent)}
     <div class="prose">
       <p>我也經營過 YouTube 頻道，在前公司規劃了「新家開箱」系列。從<b>腳本撰寫到現場監督</b>，都由我親自執行——在現場跟攝影師溝通影片要呈現的樣貌，事後也回饋剪輯意見，確保片子是我想要的節奏。</p>
       <p>拍這系列的目的其實很單純：<b>讓客人安心</b>。用完成的實際案例，證明這筆設計費花得值得。畢竟室內設計這一行，做壞的、跑路的案例從來沒少過——我們私下都說，這行的「蟑螂」無所不在。既然如此，那就用一支一支扎實的開箱影片，讓潛在客戶親眼看見我們交出來的成果。</p>
+
+      <div class="ev-label">現場證據 · 新家開箱代表作</div>
+      <div class="ev-grid c2">
+        <a class="ev-figure" href="https://www.youtube.com/watch?v=rhsFcO6i9sQ" target="_blank" rel="noopener">
+          <img src="assets/ev-yt-1.jpg" alt="奶茶灰輕奢宅 新家開箱" loading="lazy">
+          <div class="ev-cap"><span>奶茶灰輕奢宅・不反光書櫃</span><span class="m">1.5萬次</span></div>
+        </a>
+        <a class="ev-figure" href="https://www.youtube.com/watch?v=2R5ac1mu2e4" target="_blank" rel="noopener">
+          <img src="assets/ev-yt-2.jpg" alt="Rubis 的新家 室內 20 坪新家開箱" loading="lazy">
+          <div class="ev-cap"><span>Rubis 的新家・氛圍感</span><span class="m">1.6萬次</span></div>
+        </a>
+        <a class="ev-figure" href="https://www.youtube.com/watch?v=nLwbHUTiB2M" target="_blank" rel="noopener">
+          <img src="assets/ev-yt-3.jpg" alt="森林之星 公園旁大樓新家開箱" loading="lazy">
+          <div class="ev-cap"><span>森林之星・公園旁大樓</span><span class="m">1.6萬次</span></div>
+        </a>
+        <a class="ev-figure" href="https://www.youtube.com/watch?v=tUJFhUafsvs" target="_blank" rel="noopener">
+          <img src="assets/ev-yt-4.jpg" alt="2 房 17 坪 系統櫃日系小宅新家開箱" loading="lazy">
+          <div class="ev-cap"><span>2房17坪・系統櫃日系小宅</span><span class="m">2.5萬次</span></div>
+        </a>
+      </div>
+      <p class="ev-more">四支代表作合計逾 <b>7 萬次</b>觀看 · <a href="https://www.youtube.com/@ewaeho" target="_blank" rel="noopener">看整個頻道 →</a></p>
     </div>
   </section>
 
