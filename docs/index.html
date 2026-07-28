@@ -27,7 +27,6 @@
     --accent:#6A4C7D;       /* 深李子紫 */
     --accent-dim:#573E67;   /* hover 深階 */
     --accent-soft:#EFE9F1;  /* 淡紫底 */
-    --data:#9A88A8;         /* 同色系淡紫（刻度） */
     --serif:"Noto Serif TC",Georgia,serif;
     --sans:"Noto Sans TC",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",monospace;
@@ -56,8 +55,6 @@
   .eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:26px;display:flex;align-items:center;gap:12px}
   .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);flex-shrink:0}
   h1{font-family:var(--serif);font-size:clamp(60px,10vw,116px);line-height:.92;font-weight:900;letter-spacing:.01em}
-  h1 .sub{display:block;font-family:var(--serif);font-size:clamp(21px,3.4vw,32px);font-weight:500;color:var(--ink-2);letter-spacing:0;margin-top:20px;line-height:1.35}
-  .lede{max-width:54ch;margin-top:26px;font-size:clamp(16px,2vw,18px);color:var(--ink-2)}
   .meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:30px;font-family:var(--mono);font-size:13.5px;color:var(--ink-2)}
   .meta a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px}
   .meta a:hover{color:var(--accent)}
@@ -81,18 +78,6 @@
   .hero-photo img{width:100%;max-width:300px;height:auto;display:block;border-radius:4px;
     box-shadow:0 14px 36px rgba(30,25,34,.20);background:var(--paper-2)}
   .hero-photo .cap{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:10px;text-align:right}
-
-  /* ── 招牌：數據排版物件 ── */
-  .metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
-  .metric{padding:26px 24px 24px;border-right:1px solid var(--line)}
-  .metric:last-child{border-right:none}
-  .metric .fig{font-family:var(--mono);font-weight:600;font-size:clamp(34px,5vw,46px);line-height:1;letter-spacing:-.01em;color:var(--ink);display:flex;align-items:baseline;gap:2px}
-  .metric .fig .u{font-size:.5em;color:var(--accent);font-weight:500}
-  .metric .tick{margin:14px 0 12px;height:8px;display:flex;align-items:flex-end;gap:3px}
-  .metric .tick i{width:6px;background:var(--data);border-radius:1px;display:block}
-  .metric .lab{font-size:12.5px;color:var(--ink-3);line-height:1.5}
-  .metric .lab b{font-family:var(--mono);color:var(--ink-2);font-weight:500;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:4px}
-  .stats-note{margin-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.01em}
 
   /* ── 經歷 ── */
   .job{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:32px 0;border-top:1px solid var(--line)}
@@ -134,9 +119,6 @@
 
   @media(max-width:720px){
     .wrap{padding:0 22px}
-    .metrics{grid-template-columns:repeat(2,1fr)}
-    .metric:nth-child(2){border-right:none}
-    .metric:nth-child(1),.metric:nth-child(2){border-bottom:1px solid var(--line)}
     .job,.row{grid-template-columns:1fr;gap:10px}
     .job .when .now{margin-top:0}
     .skills,.links{grid-template-columns:1fr}
@@ -150,7 +132,7 @@
     .lk:hover,.lk{transform:none}
     .sec,header{padding:24px 0}
     .hero-actions,.hero-nav{display:none}
-    .job,.metric,.skill,.lk{break-inside:avoid}
+    .job,.skill,.lk{break-inside:avoid}
   }
 </style>
 </head>
@@ -161,13 +143,7 @@
   <header>
     <div class="hero-text">
     <div class="eyebrow">內容行銷人 · Content Marketer · SEO / Ads</div>
-    <h1>楊旻瑾
-      <span class="sub">用內容與數據，把流量轉成收益。</span>
-    </h1>
-    <p class="lede">
-      中文系出身、七年數位行銷實戰。橫跨 SEO 內容策略、Google／Meta 廣告投放、社群與影音企劃，
-      從策略規劃到數據追蹤一手包辦。習慣從數據中找下一步，把每一分預算花在能成交的地方。
-    </p>
+    <h1>楊旻瑾</h1>
     <div class="meta">
       <span><span class="k">地點</span>高雄（可遠端）</span>
       <span><span class="k">Email</span><a href="mailto:vvisw1@gmail.com">vvisw1@gmail.com</a></span>
@@ -175,10 +151,9 @@
     </div>
     <nav class="hero-nav" aria-label="作品導覽">
       <a href="story.html">工作自述<span class="a">→</span></a>
-      <a href="portfolio.html">成效實績<span class="a">→</span></a>
-      <a href="ads.html">廣告操盤案例<span class="a">→</span></a>
+      <a href="portfolio.html">數據佐證<span class="a">→</span></a>
       <a href="seo.html">SEO 文章作品集<span class="a">→</span></a>
-      <a href="projects.html">個人專案<span class="a">→</span></a>
+      <a href="projects.html">AI 專案<span class="a">→</span></a>
     </nav>
     <div class="hero-actions">
       <button type="button" class="btn-print" onclick="window.print()" title="開啟列印視窗，選擇「另存新檔／儲存為 PDF」即可下載">
@@ -191,34 +166,6 @@
       <div class="cap">Kaohsiung · 2026</div>
     </div>
   </header>
-
-  <!-- ░░ 數據成績 ░░ -->
-  <section class="sec" id="impact">
-    <div class="sec-head"><span class="zh">成效數據</span><span class="en">Impact</span><span class="ln"></span></div>
-    <div class="metrics">
-      <div class="metric">
-        <div class="fig">3.5<span class="u">×</span></div>
-        <div class="tick"><i style="height:2px"></i><i style="height:3px"></i><i style="height:5px"></i><i style="height:8px"></i></div>
-        <div class="lab"><b>Traffic</b>官網月活躍使用者成長<br>（接手後約 5,400 → 19,000）</div>
-      </div>
-      <div class="metric">
-        <div class="fig">4<span class="u">×</span></div>
-        <div class="tick"><i style="height:2px"></i><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i></div>
-        <div class="lab"><b>Organic</b>自然搜尋流量成長<br>主要來自 SEO 內容策略</div>
-      </div>
-      <div class="metric">
-        <div class="fig">1.2<span class="u">萬</span></div>
-        <div class="tick"><i style="height:3px"></i><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i></div>
-        <div class="lab"><b>Social</b>Facebook 粉專追蹤<br>YouTube 2,650 訂閱 · 62 部長片</div>
-      </div>
-      <div class="metric">
-        <div class="fig">−40<span class="u">%</span></div>
-        <div class="tick"><i style="height:8px"></i><i style="height:6px"></i><i style="height:4px"></i><i style="height:2px"></i></div>
-        <div class="lab"><b>Ad CPA</b>廣告單次轉換成本下降<br>以 Target CPA 策略優化並穩定</div>
-      </div>
-    </div>
-    <p class="stats-note">＊ 數據取自 GA4 與各平台後台；廣告成本以相對降幅呈現。</p>
-  </section>
 
   <!-- ░░ 經歷 ░░ -->
   <section class="sec" id="experience">
@@ -240,7 +187,7 @@
         <div class="tags">
           <span class="tag">Google Ads</span><span class="tag">Meta 廣告</span><span class="tag">SEO</span>
           <span class="tag">GA4 · GTM · GSC</span><span class="tag">影音企劃・導演</span><span class="tag">外包團隊管理</span>
-          <span class="tag">AI 工作流（Claude Code）</span><span class="tag">n8n 自動化</span><span class="tag">WordPress</span><span class="tag">團隊管理</span>
+          <span class="tag">AI 工作流（Claude Code）</span><span class="tag">WordPress</span><span class="tag">團隊管理</span>
         </div>
       </div>
     </div>
@@ -291,7 +238,7 @@
       <div class="skill"><h4>數位廣告</h4><p>Google Ads（搜尋／DSA／GDN／品牌字防衛）、Meta 廣告；多縣市帳戶結構、Target CPA／手動出價／爭取轉換 策略切換。</p></div>
       <div class="skill"><h4>SEO 與內容</h4><p>關鍵字策略、長文撰寫、精選摘要（Featured Snippet）操作；10＋ 組關鍵字進 Google 第一頁／前兩頁。</p></div>
       <div class="skill"><h4>數據分析</h4><p>GA4、Google Search Console、GTM 事件追蹤、UTM 規劃；以數據驅動投放與內容決策。</p></div>
-      <div class="skill"><h4>AI 與自動化</h4><p>以 Claude Code 開發小工具與流程自動化（如出勤考績 Python 程式）、AI 整合於內容生產；n8n 自動化、WordPress、Google Workspace／M365。</p></div>
+      <div class="skill"><h4>AI 與自動化</h4><p>以 Claude Code 開發小工具與流程自動化（如出勤考績 Python 程式）、AI 整合於內容生產；WordPress、Google Workspace／M365。</p></div>
       <div class="skill"><h4>社群與影音</h4><p>FB／IG／Threads／LINE 經營；YouTube 從腳本、導演到外包團隊審核指派，主導「新家開箱」內容產線。</p></div>
       <div class="skill"><h4>行銷管理</h4><p>KPI 與獎金制度、年度預算規劃、跨部門與外包協調、招募與團隊建立。</p></div>
     </div>
@@ -302,23 +249,28 @@
     <div class="sec-head"><span class="zh">作品與平台</span><span class="en">Work</span><span class="ln"></span></div>
     <div class="links">
       <a class="lk" href="story.html">
-        <span><span class="t">工作自述</span><span class="d">一個中文系的人怎麼做行銷 · 第一人稱長文</span></span><span class="arrow">→</span></a>
+        <span><span class="t">工作自述</span><span class="d">我對自身工作經歷的認知 · 第一人稱長文</span></span><span class="arrow">→</span></a>
+      <a class="lk" href="https://www.linkedin.com/in/jinds/" target="_blank" rel="noopener">
+        <span><span class="t">LinkedIn</span><span class="d">完整職涯與背景</span></span><span class="arrow">↗</span></a>
+      <a class="lk" href="portfolio.html">
+        <span><span class="t">數據佐證</span><span class="d">GA4 流量成長 · YouTube · FB 社群成效</span></span><span class="arrow">→</span></a>
+      <a class="lk" href="seo.html">
+        <span><span class="t">SEO 文章作品集</span><span class="d">10 篇文章 · 7 篇第一頁 · 含精選摘要</span></span><span class="arrow">→</span></a>
+      <a class="lk" href="projects.html">
+        <span><span class="t">AI 專案</span><span class="d">當代詩地圖 · AI SEO 工具 · 代購系統 · 小型電商（AI 自建）</span></span><span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ░░ 經手過的社群與官網 ░░ -->
+  <section class="sec" id="channels">
+    <div class="sec-head"><span class="zh">經手過的社群與官網</span><span class="en">Channels</span><span class="ln"></span></div>
+    <div class="links">
       <a class="lk" href="https://www.ewa.com.tw/" target="_blank" rel="noopener">
         <span><span class="t">藝瓦官網 · SEO 內容</span><span class="d">主導內容策略的官方網站</span></span><span class="arrow">↗</span></a>
       <a class="lk" href="https://www.youtube.com/@ewaeho" target="_blank" rel="noopener">
         <span><span class="t">YouTube · 藝瓦 EHO 設計</span><span class="d">2,650 訂閱 · 62 部長片（2023.05 起主導策劃）</span></span><span class="arrow">↗</span></a>
       <a class="lk" href="https://www.facebook.com/ewa.com.tw" target="_blank" rel="noopener">
         <span><span class="t">藝瓦 · Facebook 粉專</span><span class="d">經營至約 1.2 萬追蹤者</span></span><span class="arrow">↗</span></a>
-      <a class="lk" href="https://www.linkedin.com/in/jinds/" target="_blank" rel="noopener">
-        <span><span class="t">LinkedIn</span><span class="d">完整職涯與背景</span></span><span class="arrow">↗</span></a>
-      <a class="lk" href="ads.html">
-        <span><span class="t">廣告操盤案例</span><span class="d">多縣市 Google Ads · CPA −40% · 轉換 +122%</span></span><span class="arrow">→</span></a>
-      <a class="lk" href="portfolio.html">
-        <span><span class="t">成效實績</span><span class="d">GA4 流量成長 · YouTube · FB · 廣告成效</span></span><span class="arrow">→</span></a>
-      <a class="lk" href="seo.html">
-        <span><span class="t">SEO 文章作品集</span><span class="d">10 篇文章 · 7 篇第一頁 · 含精選摘要</span></span><span class="arrow">→</span></a>
-      <a class="lk" href="projects.html">
-        <span><span class="t">個人專案</span><span class="d">當代詩地圖 · AI SEO 工具 · 代購系統 · 小型電商（AI 自建）</span></span><span class="arrow">→</span></a>
     </div>
   </section>
 
