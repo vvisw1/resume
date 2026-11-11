@@ -1,0 +1,18 @@
+:root { --reading-size: 1.125rem; }
+body { overflow-wrap: break-word; }
+header .hero-text h1 { font-size: clamp(3rem, 6vw, 5rem); line-height: 1.12; }
+.intro, .job p, .job li, .skill p, .article-body, .article-excerpt, .prose, .pcard-desc, .card-desc, .cluster-lead, .pillar-desc, .cluster-note p, .spoke { font-size: var(--reading-size); line-height: 1.8; }
+.intro, .job p, .prose p, .article-body p, .pcard-desc { max-inline-size: 39em; }
+.intro { margin-block: 1em; }
+.job .when, .job .org, .hero-nav a, .back-link, .pcard-link, .ev-cap, .card-num { font-size: .9375rem; }
+.tag, .meta .k, .hero-photo .cap, .pcard-tags span, .article-body .keyword { font-size: .8125rem; }
+.job .body, .pcard-body { min-width: 0; }
+.case-links a, .job p + a { color: #573e67; text-underline-offset: .2em; }
+#kaozen { grid-column: 1 / -1; display: block; border-top: 3px solid #6a4c7d; }
+#kaozen p + p { margin-top: .75em; }
+:focus-visible { outline: 3px solid #6a4c7d; outline-offset: 3px; }
+@media (max-width: 640px) {
+  :root { --reading-size: 1.0625rem; }
+  .article-body, .prose { font-size: 1.125rem; }
+  .article-body table { display: block; overflow-x: auto; }
+}

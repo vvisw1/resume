@@ -69,6 +69,7 @@ footer a:hover{color:var(--accent)}
 }
 @media print{.back-link{display:none}.pcard{break-inside:avoid;border-color:#ddd}}
 </style>
+<link rel="stylesheet" href="assets/reading.css" media="screen">
 </head>
 <body>
 <div class="wrap">
@@ -76,11 +77,11 @@ footer a:hover{color:var(--accent)}
   <header>
     <a class="back-link" href="index.html">← 返回履歷主頁</a>
     <div class="eyebrow">AI 專案 · AI Projects</div>
-    <h1>嘗試使用 AI 創造東西</h1>
-    <p class="subtitle">以下是用 AI 創造的東西，有些已經荒廢沒在用，有些則持續在維護中。</p>
+    <h1>AI 與網站專案</h1>
+    <p class="subtitle">從高見的 SEO 工作流程，到訂單管理與當代詩閱讀工具。</p>
   </header>
 
-  <section class="projects">
+  <section class="projects"><article class="pcard" id="kaozen"><div class="pcard-body"><div class="pcard-role">高見公職 · 現職案例</div><h2 class="pcard-title">把 SEO 流程用在兩千多筆舊資料上</h2><p class="pcard-desc">多篇內容回答同一個考試問題時，我先釐清各頁的搜尋意圖，再決定支柱頁涵蓋哪些問題、哪些子題值得獨立成篇。</p><p class="pcard-desc">我把反覆執行的步驟整理成通用 SEO Skill，搭配高見官網專用 Skill，日常以 Codex 執行，偶爾用 Claude 輔助。</p></div></article>
 
     <!-- poem-map（live） -->
     <a class="pcard" href="https://poem-map-e6130.web.app/" target="_blank" rel="noopener">
@@ -88,7 +89,7 @@ footer a:hover{color:var(--accent)}
       <div class="pcard-body">
         <div class="pcard-role">內容 × 技術</div>
         <h2 class="pcard-title">台灣當代詩地圖 <span class="live">● LIVE</span></h2>
-        <p class="pcard-desc">把台灣當代詩作標記在地圖上的閱讀專案：以 Leaflet 呈現，支援作品年份與作者世代篩選，並有投稿與後台審核流程（Firebase Firestore）。從中文系的當代詩背景長出來的個人作品，也是我少數把「文學」與「技術」接在一起的嘗試。</p>
+        <p class="pcard-desc">把台灣當代詩標在地圖上。讀者可以按作品年份或作者世代探索，也能投稿，交由後台審核。</p>
         <div class="pcard-tags"><span>Leaflet</span><span>Firebase Firestore</span><span>Vite</span><span>投稿審核後台</span></div>
         <span class="pcard-link">開啟網站 ↗</span>
       </div>
@@ -100,7 +101,7 @@ footer a:hover{color:var(--accent)}
       <div class="pcard-body">
         <div class="pcard-role">SEO × AI 產品化</div>
         <h2 class="pcard-title">BornSEO · AI SEO 文章產生器</h2>
-        <p class="pcard-desc">把自己的 SEO／GEO 內容方法做成桌面工具：串接 20 種 AI 模型（Claude／GPT／Gemini／Grok／DeepSeek／Perplexity，及 OpenCode Zen 閘道的中文與免費模型），輸入種子關鍵字即自動展開「關鍵字 × 內容角度 × 痛點」矩陣批次生成多篇，並串成主題叢集（自動內部連結＋支柱頁）。輸出含 YAML front matter、FAQ、Article／FAQPage JSON-LD 的 GEO 結構化文章，可一鍵發佈為 WordPress 草稿，並提供 MCP 伺服器供 AI Agent 直接呼叫。freemium 授權、打包為可下載的 .exe。</p>
+        <p class="pcard-desc">把我的 SEO 選題方法做成桌面工具。輸入種子關鍵字後，可以展開文章角度、整理支柱頁與內部連結，再發布為 WordPress 草稿。</p>
         <div class="pcard-tags"><span>Python</span><span>多模型 API</span><span>GEO 結構化</span><span>主題叢集</span><span>WordPress API</span><span>MCP Agent</span></div>
         <span class="pcard-note">桌面工具 · 已發布 .exe（v1.0–1.2）· 持續開發中 · 原始碼私有</span>
       </div>
@@ -112,7 +113,7 @@ footer a:hover{color:var(--accent)}
       <div class="pcard-body">
         <div class="pcard-role">AI 全端工程力</div>
         <h2 class="pcard-title">代購訂單匯集系統</h2>
-        <p class="pcard-desc">為代購業者打造的營運後台：整合 8 個購物平台的訂單解析、3 組 Gmail 每日自動抓信、公開喊單頁、跨團對帳與多種 Excel 匯出、LINE／Email 通知。Next.js 16 + Supabase，全表 RLS 資安、Sentry 個資過濾、138 項自動化測試——一個非工程背景的行銷人，靠 AI 把複雜業務需求變成能上線營運的系統。</p>
+        <p class="pcard-desc">為代購業者整合八個平台的訂單。後台從信箱匯入訂單，支援跨團對帳、Excel 匯出及出貨通知。</p>
         <div class="pcard-tags"><span>Next.js 16</span><span>Supabase</span><span>Drizzle ORM</span><span>138 tests</span><span>RLS 資安</span></div>
         <span class="pcard-note">實際營運中 · 需登入 · 後台畫面已去識別</span>
       </div>
@@ -124,7 +125,7 @@ footer a:hover{color:var(--accent)}
       <div class="pcard-body">
         <div class="pcard-role">電商 × 全端 × 金流</div>
         <h2 class="pcard-title">cuddleh · 小型商店範本 <span class="live">● LIVE</span></h2>
-        <p class="pcard-desc">為朋友打造的小型網路商店，主打「零框架、零月費、一個人養得動」——一間只上 3~5 樣商品的小店，該有的樣子。綠界金流（信用卡＋超商取貨、C2C 店到店），Cloudflare 全端（Pages Functions＋D1＋Workers KV）。守四條工程紀律：結帳金額只信伺服器、訂單狀態只進不退、每個關鍵動作都留事件軌跡、刷卡整頁跳轉綠界讓卡號全程不經手（PCI 安全）。附完整店主後台（訂單／商品／媒體／客人／內容／設定）與人／AI 等權的 agent API。<span style="color:var(--ink-3)">（目前以示範商品展示）</span></p>
+        <p class="pcard-desc">我替只賣幾樣商品的店主做了一間網路商店。客人可以下單付款，店主可以自己上架商品、管理訂單。展示頁使用示範商品。</p>
         <div class="pcard-tags"><span>綠界 ECPay</span><span>Cloudflare Pages</span><span>D1</span><span>Workers KV</span><span>訂單狀態機</span><span>Agent API</span></div>
         <span class="pcard-link">開啟網站 ↗</span>
       </div>
